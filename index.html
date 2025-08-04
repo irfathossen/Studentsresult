@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Result</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="login-container">
+    <h2>Student Result Login</h2>
+    <form id="login-form">
+      <label for="roll">Roll Number:</label>
+      <input type="text" id="roll" required>
+      <label for="class">Class:</label>
+      <select id="class" required>
+        <option value="">Select Class</option>
+        <option value="2">২য়</option>
+        <option value="6">৬ষ্ঠ</option>
+        <option value="7">৭ম</option>
+        <option value="8">৮ম</option>
+        <option value="9">৯ম</option>
+      </select>
+      <button type="submit">View Result</button>
+    </form>
+  </div>
+
+  <div id="result-container" style="display:none;">
+    <div class="menu-dots" onclick="toggleMenu()">⋮</div>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <button onclick="window.print()">Print</button>
+      <button onclick="downloadResult()">Download</button>
+      <button onclick="backToLogin()">Back to Login</button>
+    </div>
+    <div class="result-card" id="result-card"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
